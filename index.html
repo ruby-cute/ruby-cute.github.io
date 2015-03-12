@@ -31,22 +31,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
     <div class="container">
     <!-- <div class="row"> -->
     <!--    -->
-    <!--   <div id="TOC" class="span3"> -->
-    <!--     <div class="well toc"> -->
-    <!--     <ul> -->
-    <!--       <li class="nav-header">Table of Contents</li> -->
-    <!--     </ul> -->
-    <!--     <ul>
-<li><a href="#ruby-cute">Ruby-Cute</a><ul>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#using-pry----an-interactive-ruby-shell">Using pry -- an interactive ruby shell</a></li>
-<li><a href="#contact-information">Contact information</a></li>
-</ul></li>
-</ul> -->
-    <!--     </div> -->
-    <!--   </div> -->
-    <!--    -->
       <div class="span12">
             <h1 id="ruby-cute">Ruby-Cute</h1>
 <p>Ruby-Cute is a set of <em>Commonly Used Tools for Experiments</em>, or <em>Critically Useful Tools for Experiments</em>, depending on who you ask. It is a library aggregating various Ruby snippets useful in the context of (but not limited to) development of experiment software on distributed systems testbeds such as Grid'5000.</p>
@@ -57,7 +41,7 @@ $ <span class="kw">cd</span> ruby-cute
 $ <span class="kw">gem</span> build ruby-cute.gemspec
 $ <span class="kw">gem</span> install ruby-cute-*.gem</code></pre>
 <p>In Grid'5000 the installation procedure goes as follows:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">gem</span> install --user-install ruby-cute-*.gem</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">gem</span> install --user-install ruby-cute</code></pre>
 <p>Then, type the following for having ruby cute in your path (this is only necessary if you want to use interactive mode).</p>
 <pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">export</span> <span class="ot">PATH=$PATH</span>:<span class="ot">$(</span><span class="kw">ruby</span> -e <span class="st">'puts &quot;#{Gem.user_dir}/bin&quot;'</span><span class="ot">)</span></code></pre>
 <h2 id="overview">Overview</h2>
@@ -67,7 +51,7 @@ $ <span class="kw">gem</span> install ruby-cute-*.gem</code></pre>
 <li><p>execute commands in several remote machines in parallel. Two modules are available for that:</p>
 <ul>
 <li><a href="http://www.rubydoc.info/github/ruby-cute/ruby-cute/master/Net/SSH/Multi">Net::SSH::Multi</a> that uses the SSH protocol.</li>
-<li><a href="http://www.rubydoc.info/github/ruby-cute/ruby-cute/master/Cute/TakTuk">Taktuk</a> which is a wrapper of <a href="http://taktuk.gforge.inria.fr">taktuk</a> parallel command executor.</li>
+<li><a href="http://www.rubydoc.info/github/ruby-cute/ruby-cute/master/Cute/TakTuk">TakTuk</a> which is a wrapper of <a href="http://taktuk.gforge.inria.fr">taktuk</a> parallel command executor.</li>
 </ul></li>
 </ul>
 <p>An example of use of Ruby-Cute in a real use case is available in <a href="http://www.rubydoc.info/github/ruby-cute/ruby-cute/master/file/examples/g5k_exp_virt.rb">Virtualization on Grid'5000</a></p>
